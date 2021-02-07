@@ -9,12 +9,8 @@ app.use((req, res, next) => {
 app.get('/api', (req, res) => {
   axios.get('https://api.meetup.com/Toronto-Code-Mentoring/events?page=4')
   .then(response=>{
-    // handle success
     res.send(response.data)
   })
 })
 
-
 module.exports = app;
-
-
