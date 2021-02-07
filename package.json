@@ -6,17 +6,9 @@
   "scripts": {
     "start": "node api/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TomoyaKuroda/code-mentoring.github.io.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TomoyaKuroda/code-mentoring.github.io/issues"
-  },
-  "homepage": "https://github.com/TomoyaKuroda/code-mentoring.github.io#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1"
