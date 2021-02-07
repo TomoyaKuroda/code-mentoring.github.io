@@ -1,12 +1,20 @@
 const app = require('express')()
+const axios = require('axios');
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+ });
 
 app.get('/api', (req, res) => {
-  res.end(`Hello! Go to item`)
+  axios.get('https://api.meetup.com/Toronto-Code-Mentoring/events?page=4')
+  .then(response=>{
+    // handle success
+    res.send(response.data)
+  })
 })
 
-app.get('/api/item/:slug', (req, res) => {
-  const { slug } = req.params
-  res.end(`Item: ${slug}`)
-})
 
-module.exports = app
+module.exports = app;
+
+
